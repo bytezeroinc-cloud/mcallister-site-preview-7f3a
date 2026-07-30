@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /
+# Staging build — not for indexing. Pending firm sign-off.
