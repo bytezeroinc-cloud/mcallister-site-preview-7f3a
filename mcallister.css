@@ -1726,3 +1726,79 @@ body.tl header .burger span{background:var(--champagne)}
 /* three-up variant of the guide cards, for the homepage strip */
 .dkgrid--three{grid-template-columns:repeat(3,1fr)}
 @media (max-width:980px){.dkgrid--three{grid-template-columns:1fr}}
+
+/* ───────── team ───────── */
+/* Used by attorneys.html and by the homepage "Our Team" rail.
+   The staff portraits are graded to dissolve into brand navy at their edges
+   (prep_team.py), so the card underneath them has to BE navy — on a light card
+   the feather reads as a grey halo instead of a fade. .port is reused verbatim
+   for the figure, so these frames reveal and seal exactly like Aaron's plate. */
+.tmgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,2.4vw,34px)}
+@media (max-width:980px){.tmgrid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:620px){.tmgrid{grid-template-columns:1fr}}
+
+/* text-decoration:none because the homepage rail makes the whole card an <a>
+   and this stylesheet has no base anchor reset — every component clears it
+   itself. Without it the browser default underlines the bio copy. */
+.tmcard{display:flex;flex-direction:column;background:var(--navy);color:rgba(239,240,242,.72);
+  border:1px solid rgba(192,151,92,.22);border-radius:var(--r-card);overflow:hidden;
+  text-decoration:none;
+  box-shadow:0 30px 64px -44px rgba(8,13,18,.7);
+  transition:transform .6s var(--eo),border-color .6s var(--e),box-shadow .6s var(--e)}
+.tmcard:hover{transform:translateY(-6px);border-color:rgba(192,151,92,.5);
+  box-shadow:0 46px 86px -46px rgba(8,13,18,.85)}
+/* the card already clips to --r-card; a second radius on the figure leaves a
+   navy crescent in each top corner */
+.tmcard .port{border-radius:0;flex:none;clip-path:inset(6% 4% 6% 4%)}
+.in .tmcard .port,html.static .tmcard .port{clip-path:inset(0)}
+.tmbody{padding:clamp(20px,2.1vw,28px);display:flex;flex-direction:column;gap:11px;flex:1}
+.tmbody p{font-size:13.6px;line-height:1.66;color:rgba(239,240,242,.7)}
+.tmname{font-family:var(--fd);font-variation-settings:'opsz' 32;font-weight:590;font-size:1.32rem;
+  line-height:1.14;letter-spacing:-.016em;color:#fff}
+.tmnote{margin-top:auto;padding-top:13px;border-top:1px solid rgba(192,151,92,.2);
+  font-family:var(--fc);font-size:9.5px;letter-spacing:.15em;text-transform:uppercase;
+  color:rgba(214,178,130,.86)}
+
+/* draft flag — this text is written by us, not by the firm, and must be
+   impossible to mistake for signed-off copy while it is still on the page */
+.tmflag{display:flex;gap:15px;align-items:flex-start;margin-bottom:clamp(28px,3vw,44px);
+  padding:17px 21px;border:1px dashed rgba(192,151,92,.55);border-radius:var(--r-img);
+  background:rgba(192,151,92,.07)}
+.tmflag i{font-style:normal;color:var(--champagne);flex:none;font-size:15px;line-height:1.5}
+.tmflag p{font-size:13.4px;line-height:1.62;color:var(--ink2)}
+.pband.dark .tmflag p{color:rgba(239,240,242,.72)}
+.tmflag b{color:var(--ink);font-weight:600}
+.pband.dark .tmflag b{color:#fff}
+
+/* the rail on the homepage borrows the matters-deck mechanics wholesale */
+.deck .tmcard{flex:0 0 calc((100% - 2*var(--dg))/3);min-width:0}
+@media (max-width:1040px){.deck .tmcard{flex-basis:calc((100% - var(--dg))/2)}}
+@media (max-width:640px){.deck .tmcard{flex-basis:100%}}
+
+/* ───────── team profiles ───────── */
+/* attorneys.html stacks four .atty blocks. Alternating which side the portrait
+   sits on is what stops four identical sections reading as a template dump —
+   .atty--rev flips the grid AND has to flip the backdrop with it, or the
+   artwork ends up behind the photograph instead of beside it. */
+.atty--rev .wrap{grid-template-columns:1.08fr .92fr}
+.atty--rev .port{order:2}
+.atty--rev .attybg img{object-position:6% center}
+.atty--rev .attybg::after{background:linear-gradient(270deg,var(--navy) 0%,var(--navy) 26%,rgba(24,40,66,.9) 48%,rgba(24,40,66,.5) 74%,rgba(24,40,66,.18) 100%)}
+@media (max-width:1080px){
+  .atty--rev .wrap{grid-template-columns:1fr}
+  .atty--rev .port{order:0}                 /* face first on a phone, always */
+  .atty--rev .attybg img{object-position:12% center}
+}
+/* consecutive navy blocks need a seam or they read as one endless section */
+.atty+.atty{border-top:1px solid rgba(192,151,92,.16)}
+/* the staff blocks carry a draft chip where Aaron carries none */
+.attydraft{display:inline-flex;align-items:center;gap:9px;margin-top:22px;padding:8px 16px;
+  border:1px dashed rgba(192,151,92,.55);border-radius:var(--r-chip);background:rgba(192,151,92,.08);
+  font-family:var(--fc);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:rgba(214,178,130,.92)}
+.attydraft::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--champagne)}
+
+/* Bianca's block keeps the base backdrop placement despite being reversed, so
+   the courthouse sits behind the PORTRAIT rather than behind the text. The
+   plate is bright marble; over type it would be unreadable, and .attybg is a
+   text-side device everywhere else. */
