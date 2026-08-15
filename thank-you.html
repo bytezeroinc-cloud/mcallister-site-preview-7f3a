@@ -20,6 +20,14 @@
 @media(max-width:719px){.ppc-hdr .ppc-tel{display:none}}
 /* Form sits directly under the hero on paid pages. */
 .ppc .contact{padding-top:clamp(24px,3.4vw,50px)}
+/* Credentials strip */
+.credrow{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:clamp(14px,2vw,28px);
+  border-top:1px solid rgba(120,95,55,.28);border-bottom:1px solid rgba(120,95,55,.28);
+  padding:clamp(20px,2.6vw,34px) 0}
+.credrow div{display:flex;flex-direction:column;gap:5px}
+.credrow b{font-family:var(--serif,Georgia,serif);font-size:clamp(17px,1.5vw,21px);line-height:1.15;color:#8a6a34}
+.credrow span{font-size:12.5px;letter-spacing:.02em;opacity:.72;line-height:1.4}
+.stnum{color:#b08a4e;font-variant-numeric:tabular-nums;margin-right:7px}
 /* Fixed call bar — paid traffic is overwhelmingly mobile. */
 .ppc-callbar{display:none}
 @media(max-width:719px){

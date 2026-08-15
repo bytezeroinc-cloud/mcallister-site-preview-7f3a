@@ -20,6 +20,14 @@
 @media(max-width:719px){.ppc-hdr .ppc-tel{display:none}}
 /* Form sits directly under the hero on paid pages. */
 .ppc .contact{padding-top:clamp(24px,3.4vw,50px)}
+/* Credentials strip */
+.credrow{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:clamp(14px,2vw,28px);
+  border-top:1px solid rgba(120,95,55,.28);border-bottom:1px solid rgba(120,95,55,.28);
+  padding:clamp(20px,2.6vw,34px) 0}
+.credrow div{display:flex;flex-direction:column;gap:5px}
+.credrow b{font-family:var(--serif,Georgia,serif);font-size:clamp(17px,1.5vw,21px);line-height:1.15;color:#8a6a34}
+.credrow span{font-size:12.5px;letter-spacing:.02em;opacity:.72;line-height:1.4}
+.stnum{color:#b08a4e;font-variant-numeric:tabular-nums;margin-right:7px}
 /* Fixed call bar — paid traffic is overwhelmingly mobile. */
 .ppc-callbar{display:none}
 @media(max-width:719px){
@@ -115,6 +123,19 @@
   </section>
 </div>
 
+<section class="pblock io" id="credentials" aria-label="Credentials">
+  <div class="wrap">
+    <div class="credrow">
+      <div><b>15+</b><span>Years in practice</span></div>
+      <div><b>300+</b><span>Cases defended</span></div>
+      <div><b>Criminal defense</b><span>Exclusively &mdash; no other practice areas</span></div>
+      <div><b>LA County Superior Court</b><span>All districts &middot; trial ready</span></div>
+      <div><b>Super Lawyers&reg;</b><span>Selected 2025 &middot; Rising Stars 2017&ndash;2024</span></div>
+      <div><b>Avvo 10.0 &mdash; Superb</b><span>Top score &middot; State Bar of California, in good standing</span></div>
+    </div>
+  </div>
+</section>
+
 <section class="pblock pband io" id="facing">
   <img class="glyphbg glyphbg--light right" data-p="-0.03" src="assets/am-mark--antique.svg" alt="">
   <div class="wrap">
@@ -151,6 +172,89 @@
   </div>
 </section>
 
+<section class="pblock pband dark io" id="why">
+  <div class="wrap">
+    <p class="eyebrow lt">Why this firm</p>
+    <h2>One team. One standard. No hand-offs.</h2>
+    <p class="sub">The lawyers you speak to on the phone are the lawyers who stand up in court. There is no intake centre between you and your representation, and no unknown associate you have never met.</p>
+    <div class="psbento">
+      <article class="pscard"><div class="psbody">
+        <h3>You speak to the attorney, not a call centre</h3>
+        <p>The first conversation is with Aaron. Four people work your file and you will know all of them by name &mdash; the same team from the first call through to resolution.</p>
+      </div></article>
+      <article class="pscard"><div class="psbody">
+        <h3>Criminal defense exclusively</h3>
+        <p>No family law, no personal injury, no side practice. Over fifteen years spent in Los Angeles County courtrooms on criminal matters and nothing else.</p>
+      </div></article>
+      <article class="pscard"><div class="psbody">
+        <h3>A flat fee, in writing, before anything is filed</h3>
+        <p>You know the number and the plan at the start. The strategy is agreed with you rather than presented to you, and nothing is agreed on your behalf without your say-so.</p>
+      </div></article>
+      <article class="pscard"><div class="psbody">
+        <h3>Answered day and night</h3>
+        <p>The line is answered 24/7, and written case reviews are answered within one business hour between 8am and 10pm, seven days a week.</p>
+      </div></article>
+    </div>
+    <div class="psfoot">
+      <a class="pill pill--foil" href="#review">Start your case review <i><b>&rarr;</b><b>&rarr;</b></i></a>
+      <span class="pstel">Or call <a href="tel:+13108812786">(310) 881-2786</a> &middot; answered 24/7</span>
+    </div>
+  </div>
+</section>
+
+<section class="pblock pband io" id="path">
+  <img class="glyphbg glyphbg--light right" data-p="-0.03" src="assets/am-mark--antique.svg" alt="">
+  <div class="wrap">
+    <p class="eyebrow">If you call today</p>
+    <h2>Four steps, complete discretion.</h2>
+    <p>From the first call to the last hearing you always know what is happening, why, and exactly where you stand.</p>
+    <div class="psbento">
+      <article class="pscard"><div class="psbody">
+        <h3><span class="stnum">01</span> You reach our team</h3>
+        <p>Send the case review or call the line. The team who will argue your case is the team you speak to &mdash; not an intake service.</p>
+      </div></article>
+      <article class="pscard"><div class="psbody">
+        <h3><span class="stnum">02</span> Confidential review</h3>
+        <p>The charge is assessed, your exposure explained plainly and every option set out &mdash; including the ones that need no lawyer at all.</p>
+      </div></article>
+      <article class="pscard"><div class="psbody">
+        <h3><span class="stnum">03</span> Defense strategy</h3>
+        <p>Reports, body-cam, priors and procedure read in full. Strategy and a flat fee confirmed in writing before anything is filed.</p>
+      </div></article>
+      <article class="pscard"><div class="psbody">
+        <h3><span class="stnum">04</span> Resolution</h3>
+        <p>Motions, negotiation or trial &mdash; whichever the record supports. Nothing is agreed on your behalf without your say-so first.</p>
+      </div></article>
+    </div>
+  </div>
+</section>
+
+<section class="pblock pband io" id="reviews">
+  <div class="wrap">
+    <p class="eyebrow">In their own words</p>
+    <h2>Client reviews</h2>
+    <div class="psbento">
+      <article class="pscard"><div class="psbody">
+        <p>&ldquo;Attorney McAllister goes above and beyond. It is clear he is very passionate about his work and getting justice and the most favorable outcome for his clients. I have hired him personally and referred him to family and friends.&rdquo;</p>
+        <p class="fine"><b>Al &mdash; hired attorney</b><br>Avvo review &middot; March 2025</p>
+      </div></article>
+      <article class="pscard"><div class="psbody">
+        <p>&ldquo;Attorney McAllister exudes Professionalism and I felt as though I knew him personally starting on Day One. He listened intently and came up with a strategy to move forward and address our case.&rdquo;</p>
+        <p class="fine"><b>Hired attorney</b><br>Avvo review &middot; November 2024</p>
+      </div></article>
+      <article class="pscard"><div class="psbody">
+        <p>&ldquo;Not only did he take me under his wing IMMEDIATELY and without hesitation after hearing my situation, he didn&rsquo;t judge me, he was quick, and was the 1st attorney out of dozens whom I called, that didn&rsquo;t interrupt me nor put me on the backburner.&rdquo;</p>
+        <p class="fine"><b>Christian &mdash; hired attorney</b><br>Avvo review &middot; November 2021</p>
+      </div></article>
+      <article class="pscard"><div class="psbody">
+        <p>&ldquo;You can tell Aaron cares about his clients and will fight tooth and nail to get the best result. He explores every avenue in a defense looking for motions to file. I&rsquo;m an attorney myself, Los Angeles native, and if any of my family members need help, I would trust them in Aaron&rsquo;s hands.&rdquo;</p>
+        <p class="fine"><b>Givelle Lamano &mdash; criminal defense lawyer</b><br>Peer endorsement &middot; Avvo</p>
+      </div></article>
+    </div>
+    <p class="fine" style="margin-top:16px;max-width:74ch">This testimonial or endorsement does not constitute a guarantee, warranty, or prediction regarding the outcome of your legal matter. Reviews excerpted from the firm&rsquo;s public Avvo profile; the peer endorsement is by a fellow attorney, as published on Avvo.</p>
+  </div>
+</section>
+
 <section class="pblock pband dark io" id="urgency">
   <div class="wrap">
     <p class="eyebrow lt">Why now</p>
@@ -180,6 +284,18 @@
         <details>
           <summary><span class="n">03</span>How are fees handled?<span class="chip" aria-hidden="true"></span></summary>
           <div class="a"><p>Flat and fixed in writing after the case review, before anything is filed. You know the number and the plan at the start.</p></div>
+        </details>
+        <details>
+          <summary><span class="n">04</span>What happens at the first court date?<span class="chip" aria-hidden="true"></span></summary>
+          <div class="a"><p>The arraignment is where the charges are formally read and a plea is entered. It is also the first opportunity to address bail and custody status, which is why going in prepared matters.</p></div>
+        </details>
+        <details>
+          <summary><span class="n">05</span>Can charges be filed later if I was released without charges?<span class="chip" aria-hidden="true"></span></summary>
+          <div class="a"><p>Yes. Release without charges is not the end &mdash; the prosecutor can still file within the statute of limitations. The pre-filing window is often the most valuable time to present the defense view.</p></div>
+        </details>
+        <details>
+          <summary><span class="n">06</span>What should I bring to the first call?<span class="chip" aria-hidden="true"></span></summary>
+          <div class="a"><p>Whatever you have: the citation or booking paperwork, the report number, any court date already given to you, and your own written account of what happened while it is still fresh.</p></div>
         </details>
       </div>
       <p class="fine" style="margin-top:18px">Want the full picture? <a href="practice-areas.html">See all California criminal defense practice areas &#8599;</a></p>
